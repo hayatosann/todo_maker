@@ -1,4 +1,12 @@
 <?php
+  require_once('./Models/Task.php');
+  require_once('function.php');
+
+  $id = $_GET['id'];
+
+  $task = new Task();
+  $task = $task->get($id);
+// var_dump($hoge);die;
 
 ?>
 <!DOCTYPE html>
