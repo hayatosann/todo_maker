@@ -56,7 +56,7 @@
                     <div class="card-body">
                         <h5 class="card-title"><?php echo h($task['title']);?></h5>
                         <p class="card-text">
-                            ここに詳細
+                        <?php echo h($task['contents']);?>
                         </p>
                         <div class="text-right d-flex justify-content-end">
                             <a href="edit.php?id=<?= h($task['id']); ?>" class="btn text-success">EDIT</a>
