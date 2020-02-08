@@ -1,9 +1,14 @@
 <?php
+  
   require_once('Models/Task.php');
   require_once('function.php');
   
   $task = new Task();
   $tasks = $task->getAll();
+
+  session_start();
+  $user=$_SESSION['user'];
+//   var_dump($user);exit;
 
 ?>
 <!DOCTYPE html>
@@ -26,7 +31,7 @@
                     <ul class="nav nav-pills">
                         <li class="nav-item">
                             <span class="nav-link text-light">
-                                ログインユーザーのメールアドレス
+                            <?= $user['email'] ?? 'ログインユーザーのメールアドレス' ?>
                             </span>
                         </li>
                         <li class="nav-item">
