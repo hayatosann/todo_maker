@@ -31,7 +31,8 @@ class Task extends Model
         // prepare
         // dbhのメソッド
         // PDOインスタンスのメソッド
-        $stmt = $this->db_manager->dbh->prepare('SELECT * FROM ' . $this->table);
+        $stmt = $this->db_manager->dbh->prepare('SELECT * FROM ' . $this->table . ' ORDER BY created DESC');
+        
 
         // $dbh === PDOクラスのインスタンス
         // $dbh->prepare('SELECT * FROM ' . $this->table);
